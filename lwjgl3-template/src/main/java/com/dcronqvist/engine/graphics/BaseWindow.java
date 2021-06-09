@@ -15,6 +15,7 @@ import java.io.PrintStream;
 import java.nio.*;
 
 import com.dcronqvist.engine.utils.GameTime;
+import com.dcronqvist.engine.utils.Input;
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
@@ -116,13 +117,13 @@ public abstract class BaseWindow {
         loadContent();
 
         float previousTime = 0.0f;
-        // Input.init(this.windowHandle);
+        Input.init(this.windowHandle);
 
         while (!glfwWindowShouldClose(this.windowHandle)) {
             float currentTime = (float) glfwGetTime();
             GameTime.totalTime = currentTime;
             GameTime.deltaTime = (currentTime - previousTime);
-            // Input.begin();
+            Input.begin();
             update();
 
             img.newFrame();
@@ -134,7 +135,7 @@ public abstract class BaseWindow {
             img3.renderDrawData(ImGui.getDrawData());
 
             glfwSwapBuffers(this.windowHandle);
-            // Input.end();
+            Input.end();
 
             glfwPollEvents();
             previousTime = currentTime;
