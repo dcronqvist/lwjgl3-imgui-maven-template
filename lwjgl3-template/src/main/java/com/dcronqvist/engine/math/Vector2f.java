@@ -80,4 +80,14 @@ public class Vector2f {
     public Vector2f scale(float scalar) {
         return new Vector2f(this.x * scalar, this.y * scalar);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Vector2f) {
+            Vector2f v = (Vector2f) obj;
+            return this.x == v.x && this.y == v.y;
+        } else {
+            return false;
+        }
+    }
 }
