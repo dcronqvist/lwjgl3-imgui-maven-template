@@ -7,6 +7,13 @@ public class Shader {
     String fragmentCode;
     int programID;
 
+    /**
+     * To use this Shader class, you simply supply the shader code to a new shader
+     * instance, for example using {@link Utils.getTextFromFile()}, and you simply
+     * have to run init() on that shader instance to have it load up! In case an
+     * error occurs during initialization, the init() method will throw and
+     * exception with a readable error message.
+     */
     public Shader(String vertexCode, String fragmentCode) {
         this.vertexCode = vertexCode;
         this.fragmentCode = fragmentCode;
