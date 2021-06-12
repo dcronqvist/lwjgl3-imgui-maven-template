@@ -3,8 +3,6 @@ package com.dcronqvist;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Random;
-
 import com.dcronqvist.engine.math.Vector2f;
 import com.dcronqvist.engine.utils.Utils;
 

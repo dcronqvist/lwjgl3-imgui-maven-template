@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.dcronqvist</groupId>
-  <artifactId>lwjgl3-template</artifactId>
+  <artifactId>lwjgl3-imgui-maven-template</artifactId>
   <version>1.0</version>
 
-  <name>lwjgl3-template</name>
+  <name>lwjgl3-imgui-maven-template</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -141,6 +141,11 @@
   </dependencies>
 
   <build>
+    <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    <scriptSourceDirectory>${basedir}/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+    <outputDirectory>${basedir}/target/classes</outputDirectory>
+    <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
     <pluginManagement>      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
