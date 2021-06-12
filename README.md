@@ -1,4 +1,4 @@
-# lwjgl3-imgui-maven-template
+# ☕ lwjgl3-imgui-maven-template
 
 A template for getting started with [LWJGL3](https://www.lwjgl.org/) in a maven environment. Includes a working implementation of [imgui](https://github.com/ocornut/imgui) aswell, ready to be used - however not necessary.
 
